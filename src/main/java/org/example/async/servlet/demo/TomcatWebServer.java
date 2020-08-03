@@ -36,9 +36,11 @@ public class TomcatWebServer {
         tomcat.addServlet("/access", "demoServlet", new DemoServlet());
         context.addServletMappingDecoded("/demo.do", "demoServlet");
 
-        // 注册servlet，编写servlet mapping
         tomcat.addServlet("/access", "asyncDemoServlet", new AsyncDemoServlet());
         context.addServletMappingDecoded("/asyncdemo.do", "asyncDemoServlet");
+
+        tomcat.addServlet("/access", "nonBlockingAsyncDemoServlet", new NonBlockingAsyncDemoServlet());
+        context.addServletMappingDecoded("/nonblockingasyncdemo.do", "nonBlockingAsyncDemoServlet");
 
 //        tomcat.init();
         tomcat.start();
