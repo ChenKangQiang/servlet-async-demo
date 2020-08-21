@@ -21,6 +21,11 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <version>8.5.51</version>
         </dependency>
+        <dependency>
+            <groupId>com.dianping.squirrel</groupId>
+            <artifactId>squirrel-async-client</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
